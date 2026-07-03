@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Riva — стоматологическая клиника премиального уровня. Познакомьтесь с врачом до записи. Современное оборудование, безболезненное лечение, индивидуальный подход.">
+  <meta name="keywords" content="стоматология, стоматологическая клиника, лечение зубов, имплантация, Riva">
+  <meta property="og:title" content="Riva — Стоматология">
+  <meta property="og:description" content="Познакомьтесь с врачом ещё до первого звонка">
+  <meta property="og:type" content="website">
+  <title>Riva — Стоматология</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
+  <header class="nav" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="#" class="nav-logo" aria-label="Riva — главная страница">
+          <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <circle cx="18" cy="18" r="17.5" stroke="#B8935A" stroke-width="1"/>
+            <path d="M11 10 C11 10 8 13 8 17 C8 21 10 23 13 23 C15 23 16 21 18 21 C20 21 21 23 23 23 C26 23 28 21 28 17 C28 13 25 10 25 10" stroke="#B8935A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+            <path d="M15 23 C15 26 16.5 28 18 28 C19.5 28 21 26 21 23" stroke="#B8935A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <span class="nav-logo-text">Riva</span>
+            <span class="nav-logo-sub">Стоматология</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Основная навигация">
+          <a href="#doctors">Врачи</a>
+          <a href="#why">О клинике</a>
+          <a href="#technology">Технологии</a>
+          <a href="#process">Первый визит</a>
+          <a href="#reviews">Отзывы</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a href="tel:+78001234567" class="nav-phone" aria-label="Позвонить в клинику">8 800 123-45-67</a>
+          <a href="#cta" class="btn btn-primary">Записаться</a>
+        </div>
+
+        <button class="nav-burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Мобильное меню">
+    <button class="mobile-menu-close" aria-label="Закрыть меню">✕</button>
+    <a href="#doctors">Врачи</a>
+    <a href="#why">О клинике</a>
+    <a href="#technology">Технологии</a>
+    <a href="#process">Первый визит</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#cta" class="btn btn-gold" style="margin-top:1rem">Записаться</a>
+  </div>
+
+  <main>
+
+    <!-- ======================================================
+         HERO
+         ====================================================== -->
+    <section class="hero" aria-label="Главный экран">
+
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="hero-badge-dot"></span>
+          Принимаем без ожидания в очереди
+        </div>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          Познакомьтесь<br>
+          с <em>врачом</em><br>
+          до записи
+        </h1>
+
+        <p class="hero-desc reveal reveal-delay-2">
+          Мы убеждены: выбор врача — это личное решение.
+          Изучите каждого специалиста, его подход и историю.
+          Только потом — звонок.
+        </p>
+
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#doctors" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20 C4 16 7.6 13 12 13 C16.4 13 20 16 20 20"/></svg>
+            Наши врачи
+          </a>
+          <a href="#process" class="btn btn-outline">Как устроен визит</a>
+        </div>
+
+        <div class="hero-scroll reveal reveal-delay-4" role="button" tabindex="0" aria-label="Прокрутить вниз">
+          <div class="hero-scroll-line"></div>
+          <span>Листать</span>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img
+          src="img/reception.jpg"
+          alt="Стойка регистрации клиники Riva"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="hero-stats" aria-label="Клиника в цифрах">
+        <div class="hero-stat reveal reveal-delay-2">
+          <span class="hero-stat-num" data-count="12" data-suffix="+">0+</span>
+          <span class="hero-stat-lbl">лет работы</span>
+        </div>
+        <div class="hero-stat reveal reveal-delay-3">
+          <span class="hero-stat-num" data-count="4800" data-suffix="+">0+</span>
+          <span class="hero-stat-lbl">пациентов</span>
+        </div>
+        <div class="hero-stat reveal reveal-delay-4">
+          <span class="hero-stat-num" data-count="98" data-suffix="%">0%</span>
+          <span class="hero-stat-lbl">довольных</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         DOCTORS
+         ====================================================== -->
+    <section class="section section-doctors" id="doctors" aria-label="Наши врачи">
+      <div class="container">
+
+        <div class="doctors-header">
+          <div>
+            <p class="eyebrow reveal">Специалисты</p>
+            <h2 class="doctors-title reveal reveal-delay-1">
+              Четыре врача —<br><em>выберите своего</em>
+            </h2>
+          </div>
+          <p class="doctors-lead reveal reveal-delay-2">
+            Каждый врач в Riva — это выбранный специалист
+            с внятной специализацией, а не безликий «стоматолог».
+            Читайте, изучайте, выбирайте заранее.
+          </p>
+        </div>
+
+        <div class="doctors-grid">
+
+          <!-- Doctor 1 -->
+          <article class="doctor-card reveal">
+            <div class="doctor-card-img">
+              <img
+                src="img/doctor1.avif"
+                alt="Алексей Михайлов — главный врач, терапевт"
+                loading="lazy"
+              >
+              <div class="doctor-card-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="doctor-card-body">
+              <h3 class="doctor-name">Алексей Михайлов</h3>
+              <p class="doctor-role">Главный врач · Терапевт</p>
+              <p class="doctor-detail">
+                15 лет практики. Специализируется на эстетической реставрации.
+                Принципиально объясняет каждый шаг лечения.
+              </p>
+              <div class="doctor-tags">
+                <span class="doctor-tag">Реставрация</span>
+                <span class="doctor-tag">Эстетика</span>
+                <span class="doctor-tag">Эндодонтия</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 2 -->
+          <article class="doctor-card reveal reveal-delay-1">
+            <div class="doctor-card-img">
+              <img
+                src="img/doctor2.jpg"
+                alt="Екатерина Волкова — хирург, имплантолог"
+                loading="lazy"
+              >
+              <div class="doctor-card-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="doctor-card-body">
+              <h3 class="doctor-name">Екатерина Волкова</h3>
+              <p class="doctor-role">Хирург · Имплантолог</p>
+              <p class="doctor-detail">
+                Автор методики безболезненной анестезии.
+                Провела более 600 имплантаций без осложнений.
+              </p>
+              <div class="doctor-tags">
+                <span class="doctor-tag">Имплантация</span>
+                <span class="doctor-tag">Хирургия</span>
+                <span class="doctor-tag">Без боли</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 3 -->
+          <article class="doctor-card reveal reveal-delay-2">
+            <div class="doctor-card-img">
+              <img
+                src="img/doctor3.avif"
+                alt="Михаил Соколов — ортодонт"
+                loading="lazy"
+              >
+              <div class="doctor-card-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="doctor-card-body">
+              <h3 class="doctor-name">Михаил Соколов</h3>
+              <p class="doctor-role">Ортодонт</p>
+              <p class="doctor-detail">
+                Специалист по невидимым элайнерам. Работает с подростками
+                и взрослыми. Убеждает фотографиями до и после.
+              </p>
+              <div class="doctor-tags">
+                <span class="doctor-tag">Элайнеры</span>
+                <span class="doctor-tag">Брекеты</span>
+                <span class="doctor-tag">Прикус</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 4 -->
+          <article class="doctor-card reveal reveal-delay-3">
+            <div class="doctor-card-img">
+              <img
+                src="img/doctor4.jpg"
+                alt="Наталья Орлова — терапевт, гигиенист"
+                loading="lazy"
+              >
+              <div class="doctor-card-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="doctor-card-body">
+              <h3 class="doctor-name">Наталья Орлова</h3>
+              <p class="doctor-role">Терапевт · Гигиенист</p>
+              <p class="doctor-detail">
+                Ведёт пациентов «с нуля». Обучает правильной гигиене
+                и предотвращает проблемы до их появления.
+              </p>
+              <div class="doctor-tags">
+                <span class="doctor-tag">Профгигиена</span>
+                <span class="doctor-tag">Профилактика</span>
+                <span class="doctor-tag">Детские</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PAIN / FEAR SECTION
+         ====================================================== -->
+    <section class="section section-pain" id="pain" aria-label="Ответы на страхи">
+      <div class="container">
+        <div class="pain-wrap">
+
+          <div class="pain-img-wrap reveal">
+            <img
+              src="img/exterier.jpg"
+              alt="Вход в клинику Riva"
+              loading="lazy"
+            >
+            <div class="pain-float" aria-hidden="true">
+              <div class="pain-float-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                  <path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/>
+                </svg>
+              </div>
+              <div class="pain-float-text">
+                <strong>Без неприятных сюрпризов</strong>
+                <span>Вы знаете цену до начала лечения</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pain-content">
+            <p class="eyebrow reveal">Честно о главном</p>
+            <h2 class="pain-title reveal reveal-delay-1">
+              Мы знаем,<br>о чём<br>вы <em>думаете</em>
+            </h2>
+            <p class="pain-text reveal reveal-delay-2">
+              Большинство людей откладывают поход к стоматологу не потому
+              что не нужно — а потому что страшно, непонятно или не хочется
+              лишних трат. Мы отвечаем честно на каждый из этих вопросов.
+            </p>
+
+            <div class="fear-list">
+
+              <div class="fear-item reveal reveal-delay-1">
+                <span class="fear-num">01</span>
+                <div class="fear-body">
+                  <strong>А будет больно?</strong>
+                  <p>Мы используем анестезию с компьютерным дозированием.
+                     Вы сами контролируете скорость введения. Большинство пациентов
+                     засыпают во время лечения.</p>
+                </div>
+              </div>
+
+              <div class="fear-item reveal reveal-delay-2">
+                <span class="fear-num">02</span>
+                <div class="fear-body">
+                  <strong>Не навяжут ли лишнее?</strong>
+                  <p>Мы показываем снимки, объясняем на мониторе и даём план
+                     лечения на руки. Вы решаете сами: делать всё сразу или
+                     поэтапно.</p>
+                </div>
+              </div>
+
+              <div class="fear-item reveal reveal-delay-3">
+                <span class="fear-num">03</span>
+                <div class="fear-body">
+                  <strong>Можно ли доверять врачу?</strong>
+                  <p>Каждый врач — живой человек с историей, фото и реальными
+                     отзывами пациентов. Выбирайте того, кому хочется доверять.</p>
+                </div>
+              </div>
+
+              <div class="fear-item reveal reveal-delay-4">
+                <span class="fear-num">04</span>
+                <div class="fear-body">
+                  <strong>Дорого ли обойдётся?</strong>
+                  <p>Первичная консультация и осмотр — бесплатно. Стоимость
+                     лечения фиксируется в договоре до начала работ.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         WHY RIVA
+         ====================================================== -->
+    <section class="section section-why" id="why" aria-label="Почему Riva">
+      <div class="container">
+
+        <div class="why-header reveal">
+          <p class="eyebrow">Наш подход</p>
+          <h2 class="why-title">Почему выбирают <em>Riva</em></h2>
+          <p class="why-sub">
+            Не потому что мы убеждаем. А потому что один раз приходят —
+            и остаются на годы.
+          </p>
+        </div>
+
+        <div class="values-grid">
+
+          <div class="value-card reveal">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20 C4 16 7.6 13 12 13 C16.4 13 20 16 20 20"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Личный врач</h3>
+            <p class="value-text">
+              Один специалист ведёт вас от осмотра до финального результата.
+              Никаких передач между кабинетами и потери истории болезни.
+            </p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-1">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2C20 17.5 12 22 12 22z"/>
+                <path d="M8.5 12.5l2.5 2.5 5-5"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Честная диагностика</h3>
+            <p class="value-text">
+              Снимок на мониторе, пояснение каждого пункта плана лечения
+              и право отказаться от любой процедуры без давления.
+            </p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-2">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Фиксированные цены</h3>
+            <p class="value-text">
+              Стоимость согласовывается до начала работы. В договоре указана
+              полная сумма. Никаких дополнительных счётов в конце.
+            </p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-3">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Запись день в день</h3>
+            <p class="value-text">
+              Мы оставляем два «срочных» слота каждый день. Зубная боль
+              не ждёт — мы тоже не заставляем ждать.
+            </p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-4">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Забота о семье</h3>
+            <p class="value-text">
+              Принимаем детей от 3 лет. Семейные карты постоянного пациента
+              с накопительными скидками для всех членов семьи.
+            </p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-5">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+            </div>
+            <h3 class="value-title">Гарантия на работу</h3>
+            <p class="value-text">
+              Даём письменную гарантию на все виды лечения — от 1 года
+              на пломбы до 5 лет на имплантацию. Без оговорок.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SPACE / INTERIOR
+         ====================================================== -->
+    <section class="section section-space" id="space" aria-label="Пространство клиники">
+      <div class="container">
+        <div class="space-grid">
+
+          <div class="space-text-col">
+            <p class="eyebrow reveal">Пространство</p>
+            <h2 class="space-title reveal reveal-delay-1">
+              Место, куда<br>хочется <em>возвращаться</em>
+            </h2>
+            <p class="space-text reveal reveal-delay-2">
+              Мы проектировали клинику вместе с архитектором,
+              который специализируется на медицинских пространствах без
+              «больничного» запаха. Здесь светло, тихо и пахнет деревом —
+              а не антисептиком.
+            </p>
+
+            <ul class="space-features reveal reveal-delay-3">
+              <li class="space-feature">Отдельный вход без очереди в регистратуру</li>
+              <li class="space-feature">Зона ожидания с кофе и водой</li>
+              <li class="space-feature">Wi-Fi и зарядки в зоне ожидания</li>
+              <li class="space-feature">Кабинеты с закрытыми дверями — полная конфиденциальность</li>
+              <li class="space-feature">Детская зона с планшетами</li>
+              <li class="space-feature">Паркинг у клиники бесплатно</li>
+            </ul>
+
+            <a href="#cta" class="btn btn-primary reveal reveal-delay-4">
+              Записаться на осмотр
+            </a>
+          </div>
+
+          <div class="space-imgs reveal reveal-delay-2">
+            <div class="space-img">
+              <img
+                src="img/reception.jpg"
+                alt="Рецепция клиники Riva"
+                loading="lazy"
+              >
+            </div>
+            <div class="space-img">
+              <img
+                src="img/exterier.jpg"
+                alt="Фасад клиники Riva"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         TECHNOLOGY
+         ====================================================== -->
+    <section class="section section-tech" id="technology" aria-label="Технологии и оборудование">
+      <div class="container">
+
+        <div class="tech-header">
+          <div>
+            <p class="eyebrow reveal">Оборудование</p>
+            <h2 class="tech-title reveal reveal-delay-1">
+              Технологии,<br>которые вы <em>увидите сами</em>
+            </h2>
+          </div>
+          <p class="tech-lead reveal reveal-delay-2">
+            Мы не пишем «современное оборудование» для галочки.
+            Ниже — конкретные устройства, которые работают в нашей клинике
+            и влияют на точность, скорость и ваш комфорт.
+          </p>
+        </div>
+
+        <div class="tech-grid">
+
+          <div class="tech-item reveal">
+            <div class="tech-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <path d="M9 9 C9 7 10.5 6 12 6 C13.5 6 15 7 15 9 C15 11 13 12 12 14"/>
+                <circle cx="12" cy="17.5" r=".5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-item-name">3D-томограф Vatech PaX-i3D</h3>
+              <p class="tech-item-desc">
+                Объёмный снимок всей челюсти за 9 секунд. Доза облучения в 5 раз ниже,
+                чем у обычного рентгена. Видим то, что недоступно «на глаз».
+              </p>
+            </div>
+          </div>
+
+          <div class="tech-item reveal reveal-delay-1">
+            <div class="tech-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-item-name">Интраоральный сканер iTero Element</h3>
+              <p class="tech-item-desc">
+                Слепки без силиконовой массы. Сканируем за 2 минуты,
+                3D-модель сразу на экране — вы видите свои зубы изнутри.
+              </p>
+            </div>
+          </div>
+
+          <div class="tech-item reveal reveal-delay-2">
+            <div class="tech-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+                <path d="M11 8v6M8 11h6"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-item-name">Микроскоп Carl Zeiss OPMI pico</h3>
+              <p class="tech-item-desc">
+                Увеличение в 40 раз. Эндодонтическое лечение под микроскопом —
+                каналы прочищаются точнее, зуб сохраняется дольше.
+              </p>
+            </div>
+          </div>
+
+          <div class="tech-item reveal reveal-delay-3">
+            <div class="tech-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <path d="M4.5 12.75l6 6 9-13.5"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-item-name">Компьютерная анестезия STA</h3>
+              <p class="tech-item-desc">
+                Система дозированной подачи анестетика. Вы сами регулируете
+                скорость — укол полностью безболезненный.
+              </p>
+            </div>
+          </div>
+
+          <div class="tech-item reveal reveal-delay-4">
+            <div class="tech-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+                <polyline points="13 2 13 9 20 9"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-item-name">Цифровые протоколы лечения</h3>
+              <p class="tech-item-desc">
+                Вся история в электронной карте. Вы получаете доступ к своей карте
+                и можете скачать снимки, рекомендации и планы лечения.
+              </p>
+            </div>
+          </div>
+
+          <div class="tech-item reveal reveal-delay-5">
+            <div class="tech-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-item-name">Отбеливание Zoom WhiteSpeed 4</h3>
+              <p class="tech-item-desc">
+                Профессиональное отбеливание за один сеанс. Результат
+                светлее на 8 тонов без повреждения эмали.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PROCESS — FIRST VISIT
+         ====================================================== -->
+    <section class="section section-process" id="process" aria-label="Первый визит">
+      <div class="container">
+
+        <div class="process-header">
+          <p class="eyebrow">Первый визит</p>
+          <h2 class="process-title">Что вас ждёт <em>в день записи</em></h2>
+          <p class="process-sub">
+            Никаких сюрпризов. Ниже — ровно то, что происходит
+            с момента, когда вы переступаете порог.
+          </p>
+        </div>
+
+        <div class="steps-grid" role="list">
+
+          <div class="step reveal" role="listitem">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3 class="step-title">Встреча без ожидания</h3>
+            <p class="step-text">
+              Администратор встречает по имени. Никакой очереди — вас
+              ждут в назначенное время.
+            </p>
+          </div>
+
+          <div class="step reveal reveal-delay-1" role="listitem">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3 class="step-title">Бесплатный осмотр</h3>
+            <p class="step-text">
+              Врач осматривает с микрокамерой — вы видите свои зубы
+              на мониторе вместе с ним.
+            </p>
+          </div>
+
+          <div class="step reveal reveal-delay-2" role="listitem">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3 class="step-title">Снимок и план</h3>
+            <p class="step-text">
+              При необходимости — 3D-снимок. Врач составляет план
+              лечения с ценами и объясняет всё на пальцах.
+            </p>
+          </div>
+
+          <div class="step reveal reveal-delay-3" role="listitem">
+            <div class="step-num" aria-hidden="true">4</div>
+            <h3 class="step-title">Вы решаете</h3>
+            <p class="step-text">
+              Начать сегодня или взять паузу на размышление —
+              только ваш выбор. Без давления.
+            </p>
+          </div>
+
+          <div class="step reveal reveal-delay-4" role="listitem">
+            <div class="step-num" aria-hidden="true">5</div>
+            <h3 class="step-title">Уходите с улыбкой</h3>
+            <p class="step-text">
+              После первого сеанса — рекомендации на бумаге и чат
+              с врачом для вопросов в любое время.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         REVIEWS
+         ====================================================== -->
+    <section class="section section-reviews" id="reviews" aria-label="Отзывы пациентов">
+      <div class="container">
+
+        <div class="reviews-header">
+          <div>
+            <p class="eyebrow reveal">Отзывы</p>
+            <h2 class="reviews-title reveal reveal-delay-1">
+              Что говорят<br><em>пациенты</em>
+            </h2>
+          </div>
+          <div class="reviews-rating reveal reveal-delay-2" aria-label="Рейтинг 4.9 из 5">
+            <span class="rating-num">4.9</span>
+            <div class="rating-stars" aria-hidden="true">
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+            </div>
+            <p class="rating-count">312 отзывов · Яндекс, Гугл, 2ГИС</p>
+          </div>
+        </div>
+
+        <div class="reviews-track-wrap" aria-label="Карусель отзывов">
+          <div class="reviews-track" role="list">
+
+            <article class="review-card reveal" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Боялась стоматологов всю жизнь. В Riva <em>первый раз в жизни</em>
+                не почувствовала боли при уколе. Екатерина — просто волшебник.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">О</div>
+                <div>
+                  <p class="review-name">Ольга Семёнова</p>
+                  <p class="review-meta">Пациент 3 года · Имплантация, реставрация</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal reveal-delay-1" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Привёл сына 7 лет — думал, будет скандал. Вышли оба
+                <em>в полном восторге</em>. Наталья умеет работать с детьми.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">И</div>
+                <div>
+                  <p class="review-name">Иван Козлов</p>
+                  <p class="review-meta">Семья 2 года · Детское, профгигиена</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal reveal-delay-2" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Пришла на осмотр — ушла с <em>чётким планом и ценами</em>.
+                Ничего лишнего, никакого давления. Это редкость.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">М</div>
+                <div>
+                  <p class="review-name">Мария Белова</p>
+                  <p class="review-meta">Новый пациент · Осмотр, план лечения</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal reveal-delay-3" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «После Riva всё остальное кажется средневековьем.
+                <em>Укол не почувствовал вообще.</em> Спасибо Алексею.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">Д</div>
+                <div>
+                  <p class="review-name">Дмитрий Фёдоров</p>
+                  <p class="review-meta">Постоянный пациент · Терапия</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal reveal-delay-4" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Поставила элайнеры у Михаила. Уже через 4 месяца
+                <em>результат заметен</em>. Регулярно обновляет фото прогресса.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">Т</div>
+                <div>
+                  <p class="review-name">Татьяна Нова</p>
+                  <p class="review-meta">В процессе · Ортодонтия, элайнеры</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Три клиники говорили — удалять. Екатерина сохранила зуб.
+                <em>Три года — стоит как родной.</em> Теперь только сюда.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">С</div>
+                <div>
+                  <p class="review-name">Сергей Никитин</p>
+                  <p class="review-meta">Постоянный пациент · Имплантация</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal reveal-delay-1" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Сын 14 лет носит элайнеры у Михаила — за 8 месяцев
+                <em>результат лучше, чем ожидали.</em> Прогресс виден каждые две недели.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">Н</div>
+                <div>
+                  <p class="review-name">Наталья Громова</p>
+                  <p class="review-meta">Семья · Ортодонтия, элайнеры</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal reveal-delay-2" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Хожу на профгигиену к Наталье каждые полгода. Впервые за 10 лет
+                зубы <em>перестали кровоточить.</em> Это просто работает.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">А</div>
+                <div>
+                  <p class="review-name">Андрей Лебедев</p>
+                  <p class="review-meta">Пациент 4 года · Профгигиена</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal reveal-delay-3" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Дочке 5 лет — после Riva <em>сама просит поехать к врачу.</em>
+                Не верила, что такое возможно. Наталья — настоящий волшебник.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">Е</div>
+                <div>
+                  <p class="review-name">Елена Крылова</p>
+                  <p class="review-meta">Семья · Детское лечение</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal reveal-delay-4" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Пришёл с острой болью в воскресенье — записали за 40 минут.
+                <em>Вышел без боли через час.</em> Сервис как в хорошей клинике за рубежом.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">В</div>
+                <div>
+                  <p class="review-name">Вадим Черников</p>
+                  <p class="review-meta">Новый пациент · Экстренная терапия</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card reveal" role="listitem">
+              <div class="review-stars" aria-label="5 звёзд">
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+                <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.2h7.6l-6.2 4.4 2.4 7.2L12 17.2l-6.2 4.4 2.4-7.2L2 10.2h7.6z"/></svg>
+              </div>
+              <blockquote class="review-text">
+                «Алексей восстановил три зуба — на снимках до и после
+                <em>ничего не отличить от натуральных.</em> Работает аккуратно и объясняет каждое движение.»
+              </blockquote>
+              <div class="review-author">
+                <div class="review-avatar" aria-hidden="true">К</div>
+                <div>
+                  <p class="review-name">Кристина Морозова</p>
+                  <p class="review-meta">Пациент 2 года · Эстетическая реставрация</p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="reviews-controls" aria-label="Управление каруселью">
+          <button class="rev-btn rev-btn-prev" aria-label="Предыдущие отзывы">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="rev-btn rev-btn-next" aria-label="Следующие отзывы">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CTA
+         ====================================================== -->
+    <section class="section section-cta" id="cta" aria-label="Запись на приём">
+
+      <div class="cta-bg-img" aria-hidden="true">
+        <img src="img/exterier.jpg" alt="" role="presentation">
+      </div>
+      <div class="cta-overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="cta-inner reveal">
+
+          <p class="eyebrow" style="justify-content:center;color:var(--clr-gold-lt);">Запись</p>
+          <h2 class="cta-title">
+            Один шаг до<br><em>первого визита</em>
+          </h2>
+          <p class="cta-sub">
+            Оставьте номер телефона — мы перезвоним в течение 15 минут
+            и согласуем удобное время. Первичный осмотр бесплатно.
+          </p>
+
+          <form class="cta-form" action="#" method="POST" novalidate>
+            <label for="cta-name" class="sr-only">Ваше имя</label>
+            <input
+              id="cta-name"
+              class="cta-input"
+              type="text"
+              name="name"
+              placeholder="Ваше имя"
+              autocomplete="name"
+            >
+            <label for="cta-phone" class="sr-only">Номер телефона</label>
+            <input
+              id="cta-phone"
+              class="cta-input"
+              type="tel"
+              name="phone"
+              placeholder="+7 (___) ___-__-__"
+              autocomplete="tel"
+              required
+            >
+            <button type="submit" class="btn btn-gold">
+              Записаться
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+
+          <p class="cta-promise">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+
+          <div class="cta-contacts">
+            <div class="cta-contact-item">
+              <p class="cta-contact-label">Телефон</p>
+              <p class="cta-contact-value"><a href="tel:+78001234567">8 800 123-45-67</a></p>
+            </div>
+            <div class="cta-contact-item">
+              <p class="cta-contact-label">Режим работы</p>
+              <p class="cta-contact-value">Пн–Пт 9:00–21:00</p>
+            </div>
+            <div class="cta-contact-item">
+              <p class="cta-contact-label">Адрес</p>
+              <p class="cta-contact-value">ул. Центральная, 12</p>
+            </div>
+            <div class="cta-contact-item">
+              <p class="cta-contact-label">WhatsApp</p>
+              <p class="cta-contact-value"><a href="https://wa.me/78001234567">Написать</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <p class="footer-logo">Riva</p>
+          <p class="footer-tagline">
+            Стоматология, где вы знаете своего врача
+            до первого визита.
+          </p>
+          <div class="footer-social" aria-label="Социальные сети">
+            <a href="#" class="footer-soc-btn" aria-label="ВКонтакте">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.547 7h-3.29a.743.743 0 0 0-.655.392s-1.312 2.416-1.77 3.36c-1.198 2.392-1.862.679-1.862-.699V7.621A1.621 1.621 0 0 0 12.35 6H9.443a.602.602 0 0 0-.585.602c0 .556.53.63.53.63s.617.123.617 1.33v2.126c0 1.586-.927.706-1.83-.962-.477-.877-1.33-2.806-1.33-2.806A.703.703 0 0 0 6.225 6.5H2.977a.477.477 0 0 0-.477.498C2.5 9.5 5.333 15.5 10.5 16.5c2.894.55 4.5-1 4.5-1v-.893c0-.48.253-.903.717-.903s1.533.39 2.283 2.503c0 0 .457.793 1.28.793h3.29c.87 0 1.03-.523.847-1.08-.3-.895-2.377-4.28-2.377-4.28-.43-.753-.383-1.088 0-1.747.001-.001 3.18-4.496 3.507-6.023C24.154 4.032 23.89 4 23.5 4h-1.71C21.82 4 21.547 4.5 21.547 7z"/></svg>
+            </a>
+            <a href="#" class="footer-soc-btn" aria-label="Телеграм">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.02 9.523c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.12 14.425l-2.95-.92c-.641-.203-.654-.641.136-.953l11.5-4.432c.537-.194 1.006.131.756.953v-.825z"/></svg>
+            </a>
+            <a href="#" class="footer-soc-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Услуги</p>
+          <ul class="footer-links">
+            <li><a href="#">Терапия</a></li>
+            <li><a href="#">Имплантация</a></li>
+            <li><a href="#">Ортодонтия</a></li>
+            <li><a href="#">Хирургия</a></li>
+            <li><a href="#">Гигиена</a></li>
+            <li><a href="#">Отбеливание</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Клиника</p>
+          <ul class="footer-links">
+            <li><a href="#doctors">Врачи</a></li>
+            <li><a href="#why">О нас</a></li>
+            <li><a href="#technology">Оборудование</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Вакансии</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Контакты</p>
+          <ul class="footer-links">
+            <li><a href="tel:+78001234567">8 800 123-45-67</a></li>
+            <li><a href="mailto:info@riva-clinic.ru">info@riva-clinic.ru</a></li>
+            <li><a href="#">ул. Центральная, 12</a></li>
+            <li style="color:rgba(255,255,255,.35);margin-top:.5rem;">Пн–Пт: 9:00–21:00</li>
+            <li style="color:rgba(255,255,255,.35);">Сб: 10:00–18:00</li>
+            <li style="color:rgba(255,255,255,.35);">Вс: выходной</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2024 Riva Стоматология. Все права защищены.</p>
+        <p class="footer-legal">
+          <a href="#">Политика конфиденциальности</a>
+          &nbsp;·&nbsp;
+          <a href="#">Договор оферты</a>
+          &nbsp;·&nbsp;
+          <a href="#">Лицензия ЛО-00-01-1234</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
