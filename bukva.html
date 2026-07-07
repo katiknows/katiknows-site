@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Панель управления — Катерина</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300&family=DM+Sans:opsz,wght@9..40,300..500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #09090B;
+  --s1: #0F0F12;
+  --s2: #151519;
+  --br: #1D1D26;
+  --ac: #00C896;
+  --t1: #EDEAE2;
+  --t2: #6C6C7A;
+  --t3: #2E2E3A;
+  --fd: 'Fraunces', Georgia, serif;
+  --fb: 'DM Sans', system-ui, sans-serif;
+  --fm: 'DM Mono', monospace;
+  --r: 12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: var(--bg); }
+body {
+  background: var(--bg);
+  color: var(--t1);
+  font-family: var(--fb);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ── LOGIN ── */
+#login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.login-box {
+  background: var(--s1);
+  border: 1px solid var(--br);
+  border-radius: 20px;
+  padding: 48px;
+  width: 100%;
+  max-width: 400px;
+}
+.login-logo {
+  font-family: var(--fd);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--t1);
+  margin-bottom: 8px;
+}
+.login-sub {
+  font-family: var(--fm);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--t2);
+  margin-bottom: 40px;
+}
+.login-label {
+  display: block;
+  font-size: 12px;
+  color: var(--t2);
+  margin-bottom: 8px;
+}
+.login-input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--br);
+  border-radius: var(--r);
+  color: var(--t1);
+  font-family: var(--fb);
+  font-size: 15px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color .2s;
+  margin-bottom: 20px;
+}
+.login-input:focus { border-color: var(--ac); }
+.login-btn {
+  width: 100%;
+  background: var(--ac);
+  border: none;
+  border-radius: var(--r);
+  color: #09090B;
+  font-family: var(--fb);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.login-btn:hover { opacity: .85; }
+.login-btn:disabled { opacity: .5; cursor: not-allowed; }
+.login-error {
+  margin-top: 14px;
+  color: #ff6b6b;
+  font-size: 13px;
+  min-height: 20px;
+  text-align: center;
+}
+
+/* ── EDITOR ── */
+#editor-screen { display: none; padding-bottom: 96px; }
+
+.editor-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(9,9,11,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--br);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+}
+.editor-header-logo {
+  font-family: var(--fd);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--t1);
+}
+.editor-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header-link {
+  font-family: var(--fm);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--t2);
+  text-decoration: none;
+  transition: color .2s;
+}
+.header-link:hover { color: var(--t1); }
+.logout-btn {
+  background: none;
+  border: 1px solid var(--br);
+  border-radius: 100px;
+  color: var(--t2);
+  font-family: var(--fm);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: border-color .2s, color .2s;
+}
+.logout-btn:hover { border-color: var(--t2); color: var(--t1); }
+
+.editor-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 32px;
+}
+
+.editor-section {
+  margin-bottom: 56px;
+}
+.editor-section-title {
+  font-family: var(--fm);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ac);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.editor-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--br);
+}
+
+.field {
+  margin-bottom: 20px;
+}
+.field-label {
+  display: block;
+  font-size: 12px;
+  color: var(--t2);
+  margin-bottom: 7px;
+}
+.field-input {
+  width: 100%;
+  background: var(--s1);
+  border: 1px solid var(--br);
+  border-radius: var(--r);
+  color: var(--t1);
+  font-family: var(--fb);
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 12px 14px;
+  outline: none;
+  resize: vertical;
+  transition: border-color .2s;
+  min-height: 46px;
+}
+.field-input:focus { border-color: var(--ac); }
+
+/* ── SAVE BAR ── */
+#save-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: rgba(9,9,11,.95);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--br);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+}
+.save-status {
+  font-size: 14px;
+  color: var(--t2);
+  min-height: 20px;
+  transition: color .3s;
+}
+.save-status.ok { color: var(--ac); }
+.save-status.err { color: #ff6b6b; }
+.save-btn {
+  background: var(--ac);
+  border: none;
+  border-radius: var(--r);
+  color: #09090B;
+  font-family: var(--fb);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: opacity .2s;
+  white-space: nowrap;
+}
+.save-btn:hover { opacity: .85; }
+.save-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+@media (max-width: 600px) {
+  .login-box { padding: 32px 24px; }
+  .editor-header { padding: 14px 16px; }
+  .editor-main { padding: 32px 16px; }
+  #save-bar { padding: 12px 16px; flex-direction: column; gap: 12px; }
+  .save-btn { width: 100%; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── ЭКРАН ВХОДА ── -->
+<div id="login-screen">
+  <div class="login-box">
+    <p class="login-logo">Катерина</p>
+    <p class="login-sub">Панель управления</p>
+    <form id="login-form">
+      <label class="login-label" for="pwd-input">Пароль</label>
+      <input class="login-input" id="pwd-input" type="password" placeholder="Введите пароль" autocomplete="current-password" required/>
+      <button class="login-btn" type="submit" id="login-btn">Войти</button>
+      <p class="login-error" id="login-error"></p>
+    </form>
+  </div>
+</div>
+
+<!-- ── РЕДАКТОР ── -->
+<div id="editor-screen">
+  <header class="editor-header">
+    <span class="editor-header-logo">Катерина</span>
+    <div class="editor-header-right">
+      <a href="/" target="_blank" class="header-link">← Открыть сайт</a>
+      <button class="logout-btn" id="logout-btn">Выйти</button>
+    </div>
+  </header>
+
+  <main class="editor-main" id="editor-main">
+    <!-- поля генерируются JS -->
+  </main>
+</div>
+
+<!-- ── ПАНЕЛЬ СОХРАНЕНИЯ ── -->
+<div id="save-bar" style="display:none">
+  <span class="save-status" id="save-status"></span>
+  <button class="save-btn" id="save-btn">Сохранить изменения</button>
+</div>
+
+<script>
+// ── Структура полей с русскими подписями ──
+const SCHEMA = [
+  {
+    section: 'Шапка сайта',
+    fields: [
+      { key: 'nav.logo',        label: 'Логотип (имя)' },
+      { key: 'nav.link_method', label: 'Ссылка «Как работаю»' },
+      { key: 'nav.link_cases',  label: 'Ссылка «Работы»' },
+      { key: 'nav.link_about',  label: 'Ссылка «Обо мне»' },
+      { key: 'nav.cta',         label: 'Кнопка «Написать»' },
+    ]
+  },
+  {
+    section: 'Первый экран',
+    fields: [
+      { key: 'hero.tag',         label: 'Подпись над заголовком' },
+      { key: 'hero.line1',       label: 'Заголовок — строка 1' },
+      { key: 'hero.line2',       label: 'Заголовок — строка 2' },
+      { key: 'hero.line3',       label: 'Заголовок — строка 3' },
+      { key: 'hero.accent',      label: 'Заголовок — акцентная строка (зелёная)' },
+      { key: 'hero.sub',         label: 'Подзаголовок', rows: 3 },
+      { key: 'hero.scroll_hint', label: 'Подсказка прокрутки' },
+    ]
+  },
+  {
+    section: 'Как работаю',
+    fields: [
+      { key: 'method.label',      label: 'Метка раздела' },
+      { key: 'method.card1_num',  label: 'Карточка 1 — метка этапа' },
+      { key: 'method.card1_title',label: 'Карточка 1 — заголовок' },
+      { key: 'method.card2_num',  label: 'Карточка 2 — метка этапа' },
+      { key: 'method.card2_title',label: 'Карточка 2 — заголовок' },
+      { key: 'method.card3_num',  label: 'Карточка 3 — метка этапа' },
+      { key: 'method.card3_title',label: 'Карточка 3 — заголовок' },
+    ]
+  },
+  {
+    section: 'Цены',
+    fields: [
+      { key: 'pricing.label',       label: 'Метка раздела' },
+      { key: 'pricing.intro_title', label: 'Заголовок блока (новая строка — перенос)' },
+      { key: 'pricing.intro_sub',   label: 'Подзаголовок блока', rows: 3 },
+      { key: 'pricing.card1_format',label: 'Тариф 1 — название' },
+      { key: 'pricing.card1_price', label: 'Тариф 1 — цена' },
+      { key: 'pricing.card1_from',  label: 'Тариф 1 — подпись под ценой' },
+      { key: 'pricing.card1_promise',label:'Тариф 1 — гарантия', rows: 2 },
+      { key: 'pricing.card2_format',label: 'Тариф 2 — название' },
+      { key: 'pricing.card2_price', label: 'Тариф 2 — цена' },
+      { key: 'pricing.card2_from',  label: 'Тариф 2 — подпись под ценой' },
+      { key: 'pricing.card2_promise',label:'Тариф 2 — гарантия', rows: 2 },
+      { key: 'pricing.card3_format',label: 'Тариф 3 — название' },
+      { key: 'pricing.card3_price', label: 'Тариф 3 — цена' },
+      { key: 'pricing.card3_from',  label: 'Тариф 3 — подпись под ценой' },
+      { key: 'pricing.card3_promise',label:'Тариф 3 — гарантия', rows: 2 },
+    ]
+  },
+  {
+    section: 'Примеры работ',
+    fields: [
+      { key: 'cases.label', label: 'Метка раздела' },
+      { key: 'cases.title', label: 'Заголовок блока (новая строка — перенос)' },
+      { key: 'cases.card1_ind',  label: 'Карточка 1 — отрасль' },
+      { key: 'cases.card1_name', label: 'Карточка 1 — название' },
+      { key: 'cases.card1_desc', label: 'Карточка 1 — описание', rows: 3 },
+      { key: 'cases.card2_ind',  label: 'Карточка 2 — отрасль' },
+      { key: 'cases.card2_name', label: 'Карточка 2 — название' },
+      { key: 'cases.card2_desc', label: 'Карточка 2 — описание', rows: 3 },
+      { key: 'cases.card3_ind',  label: 'Карточка 3 — отрасль' },
+      { key: 'cases.card3_name', label: 'Карточка 3 — название' },
+      { key: 'cases.card3_desc', label: 'Карточка 3 — описание', rows: 3 },
+      { key: 'cases.card4_ind',  label: 'Карточка 4 — отрасль' },
+      { key: 'cases.card4_name', label: 'Карточка 4 — название' },
+      { key: 'cases.card4_desc', label: 'Карточка 4 — описание', rows: 3 },
+    ]
+  },
+  {
+    section: 'Обо мне',
+    fields: [
+      { key: 'about.name', label: 'Имя' },
+      { key: 'about.p1',   label: 'Абзац 1', rows: 4 },
+      { key: 'about.p2',   label: 'Абзац 2', rows: 4 },
+      { key: 'about.p3',   label: 'Абзац 3', rows: 4 },
+      { key: 'about.p4',   label: 'Абзац 4', rows: 4 },
+    ]
+  },
+  {
+    section: 'Контакты',
+    fields: [
+      { key: 'contact.kicker',   label: 'Метка раздела' },
+      { key: 'contact.title',    label: 'Заголовок — первая строка' },
+      { key: 'contact.title_em', label: 'Заголовок — вторая строка (курсив)' },
+      { key: 'contact.sub',      label: 'Подзаголовок' },
+    ]
+  },
+  {
+    section: 'Футер',
+    fields: [
+      { key: 'footer.logo', label: 'Логотип' },
+    ]
+  },
+];
+
+// ── Состояние ──
+let password = sessionStorage.getItem('_ak') || '';
+let currentContent = null;
+
+// ── Хелперы ──
+function get(obj, dotKey) {
+  return dotKey.split('.').reduce((o, k) => o?.[k], obj);
+}
+function set(obj, dotKey, value) {
+  const keys = dotKey.split('.');
+  let cur = obj;
+  for (let i = 0; i < keys.length - 1; i++) {
+    cur[keys[i]] = cur[keys[i]] || {};
+    cur = cur[keys[i]];
+  }
+  cur[keys[keys.length - 1]] = value;
+}
+
+// ── Загрузка контента ──
+async function loadContent() {
+  const res = await fetch('https://orange-mouse-b123.sitemakery.workers.dev');
+  if (!res.ok) throw new Error('Не удалось загрузить тексты');
+  return res.json();
+}
+
+// ── Сохранение ──
+async function saveContent(data) {
+  const res = await fetch('https://orange-mouse-b123.sitemakery.workers.dev', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${password}`,
+    },
+    body: JSON.stringify(data),
+  });
+  let j = {};
+  try { j = await res.json(); } catch (_) {}
+  if (res.status === 401) throw Object.assign(new Error(j.error || 'Неверный пароль'), { status: 401 });
+  if (!res.ok) throw new Error(j.error || `Ошибка сервера ${res.status}`);
+  return j;
+}
+
+// ── Показать/скрыть экраны ──
+function showEditor() {
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('editor-screen').style.display = 'block';
+  document.getElementById('save-bar').style.display = 'flex';
+  buildForm();
+}
+function showLogin(errMsg) {
+  document.getElementById('editor-screen').style.display = 'none';
+  document.getElementById('save-bar').style.display = 'none';
+  document.getElementById('login-screen').style.display = 'flex';
+  if (errMsg) {
+    document.getElementById('login-error').textContent = errMsg;
+  }
+}
+
+// ── Построить форму ──
+function buildForm() {
+  const main = document.getElementById('editor-main');
+  main.innerHTML = '';
+
+  SCHEMA.forEach(({ section, fields }) => {
+    const sec = document.createElement('div');
+    sec.className = 'editor-section';
+
+    const title = document.createElement('h2');
+    title.className = 'editor-section-title';
+    title.textContent = section;
+    sec.appendChild(title);
+
+    fields.forEach(({ key, label, rows = 1 }) => {
+      const div = document.createElement('div');
+      div.className = 'field';
+
+      const lbl = document.createElement('label');
+      lbl.className = 'field-label';
+      lbl.textContent = label;
+      lbl.setAttribute('for', `field-${key}`);
+
+      const ta = document.createElement('textarea');
+      ta.className = 'field-input';
+      ta.id = `field-${key}`;
+      ta.dataset.key = key;
+      ta.rows = rows;
+      ta.value = get(currentContent, key) ?? '';
+
+      // Авторастягивание по содержимому
+      ta.addEventListener('input', () => {
+        ta.style.height = 'auto';
+        ta.style.height = ta.scrollHeight + 'px';
+      });
+
+      div.appendChild(lbl);
+      div.appendChild(ta);
+      sec.appendChild(div);
+    });
+
+    main.appendChild(sec);
+  });
+
+  // Инициируем высоту textarea
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.field-input').forEach(ta => {
+      ta.style.height = 'auto';
+      ta.style.height = ta.scrollHeight + 'px';
+    });
+  });
+}
+
+// ── Собрать данные из формы ──
+function collectFormData() {
+  const data = {};
+  document.querySelectorAll('.field-input').forEach(ta => {
+    set(data, ta.dataset.key, ta.value);
+  });
+  return data;
+}
+
+// ── Статус ──
+function setStatus(msg, type = '') {
+  const el = document.getElementById('save-status');
+  el.textContent = msg;
+  el.className = 'save-status' + (type ? ' ' + type : '');
+}
+
+// ── Логин ──
+document.getElementById('login-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const pwd = document.getElementById('pwd-input').value.trim();
+  if (!pwd) return;
+
+  const btn = document.getElementById('login-btn');
+  const errEl = document.getElementById('login-error');
+  btn.disabled = true;
+  btn.textContent = 'Проверяю...';
+  errEl.textContent = '';
+
+  try {
+    // Проверяем пароль через POST {} (идемпотентно — ничего не меняет)
+    password = pwd;
+    await saveContent({});
+
+    // Пароль верный — загружаем тексты
+    currentContent = await loadContent();
+    sessionStorage.setItem('_ak', pwd);
+    showEditor();
+  } catch (err) {
+    password = '';
+    sessionStorage.removeItem('_ak');
+    errEl.textContent = err.status === 401
+      ? 'Неверный пароль'
+      : 'Ошибка соединения. Попробуйте ещё раз.';
+    btn.disabled = false;
+    btn.textContent = 'Войти';
+  }
+});
+
+// ── Выход ──
+document.getElementById('logout-btn').addEventListener('click', () => {
+  password = '';
+  sessionStorage.removeItem('_ak');
+  document.getElementById('pwd-input').value = '';
+  document.getElementById('login-error').textContent = '';
+  showLogin();
+});
+
+// ── Сохранение ──
+document.getElementById('save-btn').addEventListener('click', async () => {
+  const btn = document.getElementById('save-btn');
+  btn.disabled = true;
+  setStatus('Сохраняю...');
+
+  try {
+    const data = collectFormData();
+    await saveContent(data);
+    currentContent = data;
+    setStatus('Сохранено — изменения уже на сайте ✓', 'ok');
+  } catch (err) {
+    if (err.status === 401) {
+      password = '';
+      sessionStorage.removeItem('_ak');
+      showLogin('Сессия истекла. Войдите снова.');
+    } else {
+      setStatus('Ошибка: ' + err.message, 'err');
+    }
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+// ── Инициализация ──
+(async () => {
+  if (password) {
+    try {
+      currentContent = await loadContent();
+      showEditor();
+    } catch {
+      showLogin();
+    }
+  } else {
+    showLogin();
+  }
+})();
+</script>
+</body>
+</html>

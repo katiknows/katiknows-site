@@ -146,10 +146,11 @@ button{background:none;border:none;cursor:pointer;font-family:var(--fb)}
 }
 .hero__title{
   font-family:var(--fd);
-  font-size:clamp(40px,6vw,92px);
+  font-size:clamp(40px,5.5vw,80px);
   font-weight:600;
   line-height:1.02;
-  letter-spacing:-.025em;
+  letter-spacing:-.01em;
+  word-spacing:0.04em;
   margin-bottom:44px;
 }
 .hero__line{display:block;overflow:hidden}
@@ -545,6 +546,11 @@ button{background:none;border:none;cursor:pointer;font-family:var(--fb)}
   padding:9px 18px;border-radius:100px;
   transition:border-color .2s,color .2s;
   width:fit-content;
+  position:relative;z-index:4;
+}
+/* Полноразмерная ссылка-подложка — делает всю карточку кликабельной */
+.cases__card-fulllink{
+  position:absolute;inset:0;z-index:3;
 }
 .cases__card:hover .cases__clink{border-color:var(--ac);color:var(--ac)}
 .card--dent .cases__card-glow{background:radial-gradient(ellipse at 30% 40%,#0d3550,#05111e)}

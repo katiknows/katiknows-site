@@ -118,16 +118,47 @@ document.querySelectorAll('.pricing__card').forEach((c,i)=>{
 
 /* ─── CASES DRAG ─── */
 const ct=document.getElementById('ctrack');
-let drag=false,sx=0,sl=0;
+const DRAG_THRESHOLD=7;
+let pointerDown=false,dragging=false,sx=0,sy=0,sl=0,lastPointerId=null;
+
 ct.addEventListener('pointerdown',e=>{
-  drag=true;sx=e.pageX-ct.offsetLeft;sl=ct.scrollLeft;
-  ct.classList.add('grabbing');ct.setPointerCapture(e.pointerId);
+  pointerDown=true;dragging=false;
+  sx=e.clientX;sy=e.clientY;sl=ct.scrollLeft;
+  lastPointerId=e.pointerId;
 });
-ct.addEventListener('pointerup',()=>{drag=false;ct.classList.remove('grabbing')});
+
 ct.addEventListener('pointermove',e=>{
-  if(!drag)return;
-  ct.scrollLeft=sl-(e.pageX-ct.offsetLeft-sx)*1.4;
+  if(!pointerDown)return;
+  const dx=Math.abs(e.clientX-sx);
+  const dy=Math.abs(e.clientY-sy);
+  if(!dragging&&dx>DRAG_THRESHOLD&&dx>dy){
+    dragging=true;
+    ct.setPointerCapture(lastPointerId);
+    ct.classList.add('grabbing');
+  }
+  if(dragging){
+    ct.scrollLeft=sl-(e.clientX-sx)*1.4;
+  }
 });
+
+ct.addEventListener('pointerup',()=>{
+  pointerDown=false;
+  ct.classList.remove('grabbing');
+});
+
+ct.addEventListener('pointercancel',()=>{
+  pointerDown=false;dragging=false;
+  ct.classList.remove('grabbing');
+});
+
+/* Prevent click-through after a real drag */
+ct.addEventListener('click',e=>{
+  if(dragging){
+    e.preventDefault();
+    e.stopPropagation();
+    dragging=false;
+  }
+},true);
 
 /* ─── NOT FOR ─── */
 gsap.to('.notfor__title',{opacity:1,y:0,duration:.8,
@@ -163,11 +194,73 @@ gsap.to('#c-sub',{opacity:1,y:0,duration:.7,delay:.15,
 });
 
 /* ─── FORM ─── */
-function sendForm(){
-  document.getElementById('cform').style.display='none';
-  document.getElementById('fok').classList.add('on');
+const WEB3FORMS_KEY = 'b328d668-c02e-4faa-8c81-2833a9736df9'; // Web3Forms access key
+
+async function sendForm(){
+  const form = document.getElementById('cform');
+  const name = form.querySelector('[name="name"]').value.trim();
+  const contact = form.querySelector('[name="contact"]').value.trim();
+  const message = form.querySelector('[name="message"]').value.trim();
+  const btn = form.querySelector('.fsub');
+
+  if(!name){
+    form.querySelector('[name="name"]').focus();
+    return;
+  }
+  if(!contact){
+    form.querySelector('[name="contact"]').focus();
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Отправляю...';
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        name,
+        contact,
+        message
+      })
+    });
+    const data = await res.json();
+    if(data.success){
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({event:'form_submit_success'});
+      form.style.display = 'none';
+      document.getElementById('fok').classList.add('on');
+    } else {
+      throw new Error(data.message || 'Ошибка');
+    }
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'Отправить сообщение';
+    const errEl = form.querySelector('.form-error') || Object.assign(document.createElement('p'), {className:'form-error'});
+    errEl.textContent = 'Не удалось отправить. Напишите мне напрямую в Telegram или WhatsApp.';
+    errEl.style.cssText = 'color:#ff6b6b;font-size:13px;margin-top:10px';
+    if(!form.querySelector('.form-error')) form.appendChild(errEl);
+  }
 }
 window.sendForm=sendForm;
+
+/* ─── GTM CONTACT TRACKING ─── */
+function dlPush(event){
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({event});
+}
+const contactMap = [
+  ['a[href*="t.me"]',       'telegram_click'],
+  ['a[href*="whatsapp.com"]','whatsapp_click'],
+  ['a[href^="mailto:"]',    'email_click'],
+];
+contactMap.forEach(([sel, evt])=>{
+  document.querySelectorAll(sel).forEach(el=>{
+    el.addEventListener('click', ()=>dlPush(evt));
+  });
+});
 
 /* ─── COOKIE ─── */
 (function(){
@@ -181,6 +274,10 @@ window.sendForm=sendForm;
     bar.classList.add('hidden');
   });
 })();
+
+/* ─── FOOTER YEAR ─── */
+const footerCopy = document.querySelector('.footer__copy');
+if(footerCopy) footerCopy.textContent = '© ' + new Date().getFullYear() + ' · Разработка сайтов';
 
 /* ─── REDUCED MOTION ─── */
 if(matchMedia('(prefers-reduced-motion:reduce)').matches){
